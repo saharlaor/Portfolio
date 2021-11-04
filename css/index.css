@@ -1,3 +1,11 @@
+/**************\
+*** External ***
+\**************/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+
+/************\
+*** Global ***
+\************/
 * {
     padding: 0px;
     margin: 0px;
@@ -8,3 +16,84 @@ html,
 body {
     width: 100vw;
 }
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+:root {
+    --primary-color: #d9f9f4;
+    --secondary-color: #9cd9de;
+    --menu-color: #86c1d4;
+    --title-color: #5a92af;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/************\
+*** Blocks ***
+\************/
+/* Navbar */
+.nav-wrapper {
+    display: flex;
+    width: 100vh;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    padding: 0.5rem;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+}
+
+.nav-menu {
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.011em;
+}
+
+/* About */
+/* Experience */
+/* Technologies */
+/* Pesonal */
+/* Contact */
+
+/**************\
+*** Elements ***
+\**************/
+/* Navbar */
+/* About */
+/* Experience */
+/* Technologies */
+/* Pesonal */
+/* Contact */
+
+/***************\
+*** Modifiers ***
+\***************/
+/* Navbar */
+/* About */
+/* Experience */
+/* Technologies */
+/* Pesonal */
+/* Contact */
