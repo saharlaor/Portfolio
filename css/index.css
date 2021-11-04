@@ -17,12 +17,13 @@
     --secondary-color: rgb(156, 216, 222);
     --menu-color: rgba(217, 249, 244, 0.7);
     /* --menu-color: rgb(134, 193, 213); */
-    --title-color: rgb(90, 146, 175);
+    --primary-title-color: rgb(0 40 170);
+    --secondary-title-color: rgb(25 140 200);
 }
 
 html,
 body {
-    height: 200vh;
+    min-height: 100vh;
 }
 
 body {
@@ -57,7 +58,7 @@ header {
 /* Navbar */
 .nav-wrapper {
     display: flex;
-    width: 100vh;
+    width: 100%;
     max-width: 1000px;
     justify-content: space-between;
     border-bottom: 1px solid #e2e2e2;
@@ -86,11 +87,21 @@ header {
 }
 
 /* Profile */
+.profile {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4rem;
+    animation: load-profile-img 2s ease-out;
 }
+
 .profile-img img {
     height: 500px;
     width: 500px;
@@ -102,6 +113,37 @@ header {
         -10px 0px 15px 5px rgba(140, 255, 133, 0.5),
         -10px -5px 15px 5px rgba(255, 228, 138, 0.5),
         5px -10px 15px 5px rgba(255, 128, 128, 0.5);
+}
+
+.profile-title {
+    color: var(--primary-title-color);
+    animation: load-profile-title 2s ease-out;
+}
+
+.profile-title h2 {
+    color: var(--secondary-title-color);
+}
+
+@keyframes load-profile-img {
+    from {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes load-profile-title {
+    from {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* About */
