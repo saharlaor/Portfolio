@@ -212,7 +212,8 @@ main > section ul {
 }
 
 .skills__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-around;
 }
 
@@ -223,7 +224,17 @@ main > section ul {
 
 /* Projects */
 #projects {
+    display: grid;
     grid-area: projects;
+    grid-template-columns: 1fr 1fr;
+}
+
+#projects h2 {
+    grid-column: 1 / span 2;
+}
+
+#projects > a > img {
+    width: 100%;
 }
 
 /* Personal */
@@ -243,6 +254,10 @@ main > section ul {
 /* Profile */
 /* About */
 /* Experience */
+.experience__education > ul > li > span {
+    /* inline-block so the year range would line wrap together */
+    display: inline-block;
+}
 /* Skills */
 .skills-list__item::before {
     content: "";
@@ -261,8 +276,8 @@ main > section ul {
 /* Personal */
 /* Contact */
 .contact-details__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1.2fr 1.4fr 0.7fr 0.7fr;
     justify-content: space-evenly;
 }
 
@@ -343,5 +358,60 @@ main > section ul {
 /* Personal */
 /* Contact */
 
-@media (max-width: 1005px) {
+@media (max-width: 1101px) {
+    .profile {
+        flex-direction: column;
+    }
+
+    #about {
+        min-width: 365px;
+    }
+
+    #experience {
+        min-width: 380px;
+    }
+
+    #about p,
+    #experience ul {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 799px) {
+    main {
+        grid-template-areas:
+            "about"
+            "experience"
+            "skills"
+            "projects"
+            "contact";
+    }
+
+    #about {
+        min-width: 365px;
+    }
+
+    #experience {
+        min-width: 380px;
+    }
+
+    .skills__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-list {
+        margin: auto;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    #projects h2 {
+        grid-column: initial;
+    }
+
+    .contact-details__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
