@@ -16,9 +16,10 @@
     --primary-color: rgb(217, 249, 244);
     --secondary-color: rgb(156, 216, 222);
     --menu-color: rgba(217, 249, 244, 0.7);
-    /* --menu-color: rgb(134, 193, 213); */
-    --primary-title-color: rgb(0 40 170);
-    --secondary-title-color: rgb(25 140 200);
+    --content-color: #4562b6;
+    --primary-title-color: rgb(0, 40, 170);
+    --secondary-title-color: rgb(25, 140, 200);
+    --header-color: rgb(240, 255, 250);
 }
 
 html,
@@ -38,6 +39,7 @@ nav {
     justify-content: center;
     position: fixed;
     background: var(--menu-color);
+    z-index: 100;
 }
 
 a {
@@ -50,6 +52,50 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: var(--header-color);
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "about experience"
+        "skills skills"
+        "personal contact";
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+main > * {
+    padding: 2rem;
+}
+
+main > section {
+    color: var(--content-color);
+    background: var(--header-color);
+    border-radius: 2rem;
+    line-height: 1.5rem;
+}
+
+main > section .primary-title {
+    margin-bottom: 1rem;
+    color: var(--primary-title-color);
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+main > section .secondary-title {
+    margin: 1rem 0;
+    color: var(--secondary-title-color);
+    font-size: 1.5rem;
+}
+
+main > section p,
+main > section ul {
+    margin: 0 0.5rem;
+}
+
+main > section ul {
+    list-style-type: none;
 }
 
 /************\
@@ -147,10 +193,28 @@ header {
 }
 
 /* About */
+#about {
+    grid-area: about;
+    /* height: 100vh; */
+}
+
 /* Experience */
-/* Technologies */
-/* Pesonal */
+#experience {
+    grid-area: experience;
+    min-width: 525px;
+}
+/* Skills */
+#skills {
+    grid-area: skills;
+}
+/* Personal */
+#personal {
+    grid-area: personal;
+}
 /* Contact */
+#contact {
+    grid-area: contact;
+}
 
 /**************\
 *** Elements ***
@@ -159,8 +223,8 @@ header {
 /* Profile */
 /* About */
 /* Experience */
-/* Technologies */
-/* Pesonal */
+/* Skills */
+/* Personal */
 /* Contact */
 
 /***************\
@@ -170,6 +234,6 @@ header {
 /* Profile */
 /* About */
 /* Experience */
-/* Technologies */
-/* Pesonal */
+/* Skills */
+/* Personal */
 /* Contact */
