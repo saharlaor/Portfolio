@@ -2,6 +2,7 @@
 *** External ***
 \**************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+/* @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css"); */
 
 /************\
 *** Global ***
@@ -203,14 +204,27 @@ main > section ul {
     grid-area: experience;
     min-width: 525px;
 }
+
 /* Skills */
 #skills {
     grid-area: skills;
 }
+
+.skills__content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills__content li {
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
 /* Personal */
 #personal {
     grid-area: personal;
 }
+
 /* Contact */
 #contact {
     grid-area: contact;
@@ -224,6 +238,19 @@ main > section ul {
 /* About */
 /* Experience */
 /* Skills */
+.skills-list__item::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    background: none no-repeat center center/ cover;
+    background-size: 1.5rem 1.5rem;
+}
+
 /* Personal */
 /* Contact */
 
@@ -235,5 +262,65 @@ main > section ul {
 /* About */
 /* Experience */
 /* Skills */
+.skills-list__item--docker::before {
+    background-image: url("https://api.iconify.design/logos/docker-icon.svg");
+}
+
+.skills-list__item--kubernetes::before {
+    background-image: url("https://api.iconify.design/logos/kubernetes.svg");
+}
+
+.skills-list__item--helm::before {
+    background-image: url("https://api.iconify.design/vscode-icons/file-type-helm.svg");
+}
+
+.skills-list__item--nginx::before {
+    background-image: url("https://api.iconify.design/logos/nginx.svg");
+}
+
+.skills-list__item--c::before {
+    background-image: url("https://api.iconify.design/logos/c.svg");
+}
+
+.skills-list__item--cs::before {
+    background-image: url("https://api.iconify.design/logos/c-sharp.svg");
+}
+
+.skills-list__item--python::before {
+    background-image: url("https://api.iconify.design/logos/python.svg");
+}
+
+.skills-list__item--html::before {
+    background-image: url("https://api.iconify.design/logos/html-5.svg");
+}
+
+.skills-list__item--css::before {
+    background-image: url("https://api.iconify.design/logos/css-3.svg");
+}
+
+.skills-list__item--js::before {
+    background-image: url("https://api.iconify.design/logos/javascript.svg");
+}
+
+.skills-list__item--linux::before {
+    background-image: url("https://api.iconify.design/heroicons-outline/desktop-computer.svg");
+}
+
+.skills-list__item--bash::before {
+    background-image: url("https://api.iconify.design/logos/bash-icon.svg");
+}
+
+.skills-list__item--powershell::before {
+    background-image: url("https://api.iconify.design/vscode-icons/file-type-powershell.svg");
+}
+
+.skills-list__item--ansible::before {
+    background-image: url("https://api.iconify.design/logos/ansible.svg");
+}
+
+/* Projects */
 /* Personal */
 /* Contact */
+
+@media (max-width: 1005px) {
+}
