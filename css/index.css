@@ -2,7 +2,7 @@
 *** External ***
 \**************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
-/* @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css"); */
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
 
 /************\
 *** Global ***
@@ -260,6 +260,20 @@ main > section ul {
 /* Projects */
 /* Personal */
 /* Contact */
+.contact-details__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.contact-details__list-item {
+    padding: 0 10px;
+}
+
+.contact-details__title {
+    color: var(--primary-title-color);
+    font-size: 1.2rem;
+}
 
 /***************\
 *** Modifiers ***
