@@ -61,7 +61,8 @@ main {
     grid-template-areas:
         "about experience"
         "skills skills"
-        "personal contact";
+        "projects projects"
+        "contact contact";
     gap: 1.5rem;
     padding: 1.5rem;
 }
@@ -78,15 +79,15 @@ main > section {
 }
 
 main > section .primary-title {
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     color: var(--primary-title-color);
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 3rem;
+    text-align: center;
 }
-
 main > section .secondary-title {
-    margin: 1rem 0;
     color: var(--secondary-title-color);
+    margin: 1rem 0;
     font-size: 1.5rem;
 }
 
@@ -118,8 +119,8 @@ main > section ul {
     letter-spacing: -0.025rem;
 }
 
-.nav-menu {
-}
+/* .nav-menu {
+} */
 
 .nav-menu ul {
     display: flex;
@@ -220,6 +221,11 @@ main > section ul {
     font-size: 1.2rem;
 }
 
+/* Projects */
+#projects {
+    grid-area: projects;
+}
+
 /* Personal */
 #personal {
     grid-area: personal;
@@ -251,6 +257,7 @@ main > section ul {
     background-size: 1.5rem 1.5rem;
 }
 
+/* Projects */
 /* Personal */
 /* Contact */
 
