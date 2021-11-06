@@ -240,8 +240,15 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    margin: 4rem;
     animation: load-profile-img 2s ease-out;
+    border-radius: 50%;
+    box-shadow: 5px 10px 15px 7px rgba(255, 97, 107, 0.5),
+        10px 5px 15px 7px rgba(228, 136, 255, 0.5),
+        -10px 0px 15px 5px rgba(140, 255, 133, 0.5),
+        -10px -5px 15px 5px rgba(255, 228, 138, 0.5),
+        5px -10px 15px 5px rgba(255, 128, 128, 0.5);
+    animation: spin 2s linear 0s infinite;
 }
 
 .profile-img img {
@@ -254,11 +261,7 @@ footer {
     border-radius: 50%;
     object-fit: cover;
     object-position: 63%;
-    box-shadow: 5px 10px 15px 7px rgba(255, 97, 107, 0.5),
-        10px 5px 15px 7px rgba(228, 136, 255, 0.5),
-        -10px 0px 15px 5px rgba(140, 255, 133, 0.5),
-        -10px -5px 15px 5px rgba(255, 228, 138, 0.5),
-        5px -10px 15px 5px rgba(255, 128, 128, 0.5);
+    animation: spin 2s linear 0s infinite reverse;
 }
 
 .profile-title {
