@@ -59,6 +59,7 @@ header {
     height: 100vh;
     min-height: 480px;
     background: var(--header-color);
+    overflow-x: hidden;
 }
 
 main {
@@ -238,17 +239,12 @@ footer {
 
 .profile-img {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     margin: 4rem;
-    animation: load-profile-img 2s ease-out;
     border-radius: 50%;
-    box-shadow: 5px 10px 15px 7px rgba(255, 97, 107, 0.5),
-        10px 5px 15px 7px rgba(228, 136, 255, 0.5),
-        -10px 0px 15px 5px rgba(140, 255, 133, 0.5),
-        -10px -5px 15px 5px rgba(255, 228, 138, 0.5),
-        5px -10px 15px 5px rgba(255, 128, 128, 0.5);
-    animation: spin 2s linear 0s infinite;
+    animation: load-profile-img 2s ease-out;
 }
 
 .profile-img img {
@@ -261,7 +257,28 @@ footer {
     border-radius: 50%;
     object-fit: cover;
     object-position: 63%;
-    animation: spin 2s linear 0s infinite reverse;
+}
+
+.profile-img::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: calc(90vh - 150px);
+    width: calc(90vh - 150px);
+    max-height: 500px;
+    max-width: 500px;
+    min-height: 200px;
+    min-width: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 10px 15px 7px rgba(255, 97, 107, 0.5),
+        10px 5px 15px 7px rgba(228, 136, 255, 0.5),
+        -10px 0px 15px 5px rgba(140, 255, 133, 0.5),
+        -10px -5px 15px 5px rgba(255, 228, 138, 0.5),
+        5px -10px 15px 5px rgba(255, 128, 128, 0.5);
+    z-index: 1000;
+    animation: spin 2s linear 2s infinite;
 }
 
 .profile-title {
@@ -492,7 +509,14 @@ footer {
     html {
         font-size: 16px;
     }
+
     .profile-img img {
+        min-height: 200px;
+        min-width: 200px;
+    }
+    .profile-img::before {
+        height: 80vw;
+        width: 80vw;
         min-height: 200px;
         min-width: 200px;
     }
@@ -622,15 +646,15 @@ footer {
     }
 
     .profile-img {
-        width: 100vw;
-        height: 100vw;
+        width: 80vw;
+        height: 80vw;
     }
 
     .profile-img img {
         margin: auto;
         padding: 0;
-        height: 90%;
-        width: 90%;
+        height: 100%;
+        width: 100%;
     }
 
     .profile-title h2 {
@@ -654,7 +678,6 @@ footer {
     main > section,
     #about,
     #experience {
-        width: 95%;
         min-width: 200px;
         padding: 20px;
     }
@@ -683,5 +706,9 @@ footer {
         max-height: 50px;
         font-size: 0.8rem;
         /* justify-content: ; */
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }
