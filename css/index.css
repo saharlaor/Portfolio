@@ -312,6 +312,12 @@ footer {
     }
 }
 
+@keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+}
+
 /* About */
 #about {
     grid-area: about;
@@ -403,12 +409,12 @@ footer {
 }
 
 .skills-list__item:hover::before {
-    animation: spin 2s linear 0s infinite;
+    animation: flip 2s linear 0s infinite;
 }
 
-@keyframes spin {
+@keyframes flip {
     from {
-        transform: rotate(360deg);
+        transform: rotateY(360deg);
     }
 }
 
