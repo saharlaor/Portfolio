@@ -515,8 +515,6 @@ footer {
         min-width: 200px;
     }
     .profile-img::before {
-        height: 80vw;
-        width: 80vw;
         min-height: 200px;
         min-width: 200px;
     }
@@ -646,6 +644,11 @@ footer {
     }
 
     .profile-img {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .profile-img::before {
         width: 80vw;
         height: 80vw;
     }
